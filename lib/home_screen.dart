@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'motivasi_quote.dart';
 import 'theme.dart';
+import 'pomodoro_timer.dart';
 
 class Task {
   final String title;
@@ -62,7 +63,7 @@ class _MoodoHomePageState extends State<MoodoHomePage> {
           'Tugas "${completedTask.title}" selesai! Semangat terus!',
           style: const TextStyle(fontWeight: FontWeight.w600),
         ),
-        backgroundColor: widget.isDarkMode ? Colors.grey[800] : Colors.pink[100],
+        backgroundColor: widget.isDarkMode ? Colors.grey[500] : Colors.pink[300],
         duration: const Duration(seconds: 2),
       ),
     );
@@ -80,6 +81,13 @@ class _MoodoHomePageState extends State<MoodoHomePage> {
         _selectedDeadline = picked;
       });
     }
+  }
+
+  void _showPomodoroTimer(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) => const PomodoroTimer(),
+    );
   }
 
   Widget _buildTaskInput() {
@@ -105,7 +113,7 @@ class _MoodoHomePageState extends State<MoodoHomePage> {
                     decoration: InputDecoration(
                       hintText: 'Tugas baru',
                       hintStyle: TextStyle(
-                        color: isDark ? Colors.white38 : Colors.black38,
+                        color: isDark ? Colors.white38 : Colors.black54,
                       ),
                       border: InputBorder.none,
                     ),
@@ -182,6 +190,14 @@ class _MoodoHomePageState extends State<MoodoHomePage> {
                       color: isDark ? Colors.white : Colors.black,
                     ),
                   ),
+                ),
+                IconButton(
+                  icon: Icon(
+                    Icons.timer,
+                    color: isDark ? Colors.white70 : Colors.black54,
+                  ),
+                  onPressed: () => _showPomodoroTimer(context),
+                  tooltip: 'Mulai Pomodoro Timer',
                 ),
                 Checkbox(
                   value: task.isCompleted,
@@ -288,14 +304,27 @@ class _MoodoHomePageState extends State<MoodoHomePage> {
                     color: isDark ? Colors.white : Colors.black,
                   ),
                 ),
-                IconButton(
-                  icon: Icon(
-                    isDark ? Icons.nightlight_round : Icons.wb_sunny,
-                    color: isDark ? Colors.white : Colors.black,
-                    size: 28,
-                  ),
-                  onPressed: widget.onToggleTheme,
-                  tooltip: isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode',
+                Row(
+                  children: [
+                    IconButton(
+                      icon: Icon(
+                        Icons.timer,
+                        color: isDark ? Colors.white : Colors.black,
+                        size: 28,
+                      ),
+                      onPressed: () => _showPomodoroTimer(context),
+                      tooltip: 'Pomodoro Timer',
+                    ),
+                    IconButton(
+                      icon: Icon(
+                        isDark ? Icons.nightlight_round : Icons.wb_sunny,
+                        color: isDark ? Colors.white : Colors.black,
+                        size: 28,
+                      ),
+                      onPressed: widget.onToggleTheme,
+                      tooltip: isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode',
+                    ),
+                  ],
                 ),
               ],
             ),
