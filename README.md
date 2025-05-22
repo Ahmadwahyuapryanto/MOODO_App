@@ -7,7 +7,7 @@ Jurusan : Sistem Informasi
 Semester : 6 
 
 <img src="images/darkmode.png" alt="Foto Aplikasi" width="200" />  
-<img src="images/lightmodemode.png" alt="Foto Aplikasi" width="200" />  
+<img src="images/lightmode.png" alt="Foto Aplikasi" width="200" />  
 <img src="images/pomodoro.png" alt="Foto Aplikasi" width="200" /> 
 
 #MOODO App
