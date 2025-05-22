@@ -1,16 +1,33 @@
-# moodo_app
 
-A new Flutter project.
+# Biodata Mahasiswa
 
-## Getting Started
+Nama : Ahmad Wahyu Apryanto  
+NIM : 2022804098  
+Jurusan : Sistem Informasi
+Semester : 6 
 
-This project is a starting point for a Flutter application.
+<img src="images/darkmode.png" alt="Foto Aplikasi" width="200" />  
+<img src="images/lightmodemode.png" alt="Foto Aplikasi" width="200" />  
+<img src="images/pomodoro.png" alt="Foto Aplikasi" width="200" /> 
 
-A few resources to get you started if this is your first Flutter project:
+#MOODO App
+**Aplikasi Pencatatan Tugas dengan Motivasi & Pomodoro Timer**  
+MOODO membantu Anda mencatat tugas sambil memberikan motivasi random setiap kali membuka/menyelesaikan tugas, dilengkapi Pomodoro Timer untuk fokus optimal.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📌 Fitur Utama
+1. **Pencatatan Tugas**
+    - Tambah, edit, hapus, dan tandai tugas sebagai selesai.
+    - Membuat Deadline
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2. **Kata-Kata Motivasi Random**
+    - Motivasi muncul otomatis saat:
+        - Membuka aplikasi.
+        - Menyelesaikan tugas.
+
+3. **Pomodoro Timer ⏳**
+    - Timer 25 menit (fokus) + 5 menit (istirahat).
+    - Notifikasi saat sesi berakhir.
+
+4. **Tema Personalisasi**
+    - Pilih tema terang/gelap.
+    - Animasi interaktif  
